@@ -23,41 +23,41 @@
             var j=0;
             if(music){
                 for(const i in music){
-                    j += 1;
-                    const row =`
-                      <div class="carousel-item">
-                        <img
-                          class="carousel-item__img"
-                          src="${music[i].image}"
-                          alt="people"
-                        />
-                        <div class="carousel-item__details">
-                          <div class="controls">
-                            <span class="fas fa-play-circle"></span>
-                            <span class="fas fa-plus-circle"></span>
-                          </div>
-                          <h5 class="carousel-item__details--title">${music[i].title}</h5>
-                          <h6 class="carousel-item__details--subtitle">${music[i].release}</h6>
-                          <h6 class="carousel-item__details--subtitle">${music[i].artist}</h6>
-                          <ul>
-                              <h5 class="carousel-item__details--title">Band Genres:</h5>
-                              <li class="carousel-item__details--subtitle">${music[i].genres.genre_1}</li>
-                              <li class="carousel-item__details--subtitle">${music[i].genres.genre_2}</li>
-                              <li class="carousel-item__details--subtitle">${music[i].genres.genre_3}</li>
-                              <li class="carousel-item__details--subtitle">${music[i].genres.genre_4}</li>
-                              <li class="carousel-item__details--subtitle">${music[i].genres.genre_5}</li>
-                          </ul>
-                          <audio controls="true"  style="width: 99%;" class="audio-1">
-                          <source src="${music[i].song}" type="audio/mpeg">
-                          Your browser does not support the audio element.
-                          </audio>
+                  j += 1;
+                  const row =`
+                    <div class="carousel-item">
+                      <img
+                        class="carousel-item__img"
+                        src="${music[i].image}"
+                        alt="people"
+                      />
+                      <div class="carousel-item__details">
+                        <div class="controls">
+                          <span class="fas fa-play-circle"></span>
+                          <span class="fas fa-plus-circle"></span>
                         </div>
-                      `;
-                            items.innerHTML += row;
-                        }
-                    }
-                }
-              </script>
+                        <h5 class="carousel-item__details--title">${music[i].title}</h5>
+                        <h6 class="carousel-item__details--subtitle">${music[i].release}</h6>
+                        <h6 class="carousel-item__details--subtitle">${music[i].artist}</h6>
+                        <ul>
+                            <h5 class="carousel-item__details--title">Band Genres:</h5>
+                            <li class="carousel-item__details--subtitle">${music[i].genres.genre_1}</li>
+                            <li class="carousel-item__details--subtitle">${music[i].genres.genre_2}</li>
+                            <li class="carousel-item__details--subtitle">${music[i].genres.genre_3}</li>
+                            <li class="carousel-item__details--subtitle">${music[i].genres.genre_4}</li>
+                            <li class="carousel-item__details--subtitle">${music[i].genres.genre_5}</li>
+                        </ul>
+                        <audio controls="true"  style="width: 99%;" class="audio-1">
+                        <source src="${music[i].song}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                        </audio>
+                      </div>
+                  `;
+                items.innerHTML += row;
+              }
+            }
+          }
+        </script>
     </div>
   </section>
 </body>
